@@ -21,15 +21,15 @@ defaults:
     layout: post
 lang: pt_BR
 description: Não se esqueça de preencher a descrição do site.
-baseurl: ""
-url: ""
+baseurl: ''
+url: ''
 markdown: kramdown
 permalink: pretty
 sass:
   style: compressed
 exclude:
-- .sass-cache/
-- .jekyll-cache/
+- ".sass-cache/"
+- ".jekyll-cache/"
 - gemfiles/
 - Gemfile
 - Gemfile.lock
