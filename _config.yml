@@ -1,5 +1,5 @@
 ---
-title: Aalslogistica.Github.Io
+title: AALS Logística
 timezone: America/Sao_Paulo
 collections:
   posts:
@@ -8,3 +8,35 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+lang: pt_BR
+description: Não se esqueça de preencher a descrição do site.
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+exclude:
+- .sass-cache/
+- .jekyll-cache/
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+- CNAME
+- README.md
