@@ -11,6 +11,7 @@ blockquote, pre, hr, dl, dd, ol, ul, figure
   padding: 0
 
 body 
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} sans-serif // Compatibilidade no IE
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family
   color: $text-color
   background-color: $background-color
@@ -47,6 +48,9 @@ hr
   box-sizing: content-box
   height: 0
   overflow: visible
+  border: none
+  border-bottom: 1px solid $grey-color-light
+  margin: $spacing-unit auto
 
 figcaption 
   font-size: $small-font-size
@@ -69,6 +73,9 @@ li
 h1, h2, h3, h4, h5, h6 
   font-weight: $base-font-weight
   line-height: 1.1
+  
+h1, h2, h3, h4, h5, h6 
+  font-family: $title-font-family
 
 @for $i from 1 through 6
   h#{$i}
@@ -77,10 +84,6 @@ h1, h2, h3, h4, h5, h6
 %transition
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
-  -webkit-transform: translate3d(0, 0, 0)
-  transform: translate3d(0, 0, 0)
-  -webkit-transform-style: preserve-3d
-  transform-style: preserve-3d
   -webkit-transition: .3s ease-in-out
   transition: .3s ease-in-out
 
@@ -93,6 +96,8 @@ a
   &:hover, &:focus, &:active
     color: $text-color
     text-decoration: underline
+  &[href^="mailto:"]
+    word-wrap: break-word
 
 abbr[title]
   border-bottom: none // normalize.css Chrome 57-, FF 39-
@@ -155,23 +160,6 @@ pre
     padding-right: 0
     padding-left: 0
 
-table
-  table-layout: fixed
-  border-collapse: collapse
-
-  tr
-    &:nth-of-type(odd)
-      background: $grey-color-light
-
-  th
-    background: $grey-color
-    color: #fff
-    font-weight: bold
-
-  th, td
-    padding: 5px
-    border: 1px solid #fff
-
 .page-content 
   padding: $spacing-unit 0
 
@@ -192,27 +180,44 @@ table
   &.large
     max-width: $large-content-width
 
-  &.small
-    max-width: $on-laptop
-
-  &.tiny
-    max-width: $on-palm
-
 %clearfix 
   &:after 
     content: ""
     display: table
     clear: both
 
+.embed-container
+  position: relative
+  padding-bottom: 56%
+  iframe, object, embed, > *
+    position: absolute
+    width: 100%
+    height: 100%
+
 .icon, .icon-colored
   > svg
     display: inline-block
     width: 1em
     height: 1em
-    vertical-align: text-top
+    vertical-align: middle
 
 .icon
   > svg
     color: inherit
     path 
       fill: currentcolor
+
+.circ
+  overflow: hidden
+  border-radius: 9999px
+
+.card
+  display: inline-block
+  background: $background-color
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0 5px 25px 0 rgba(#000, .2)
+  > *
+    padding: $spacing-unit / 2
+    +media-query($on-palm)
+      padding: $spacing-unit / 4

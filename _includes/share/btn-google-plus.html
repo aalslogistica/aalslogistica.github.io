@@ -1,0 +1,9 @@
+{% assign href = site.url | append: site.baseurl | append: page.url %}
+<a class="icon {{ include.class }}" 
+    href="https://plus.google.com/share?url={{ href | cgi_escape }}" target="_blank" 
+    title="Compartilhar no Google Plus"
+    data-ga-event="click"
+    data-ga-category="Compartilhar ({{ include.position }})"
+>
+    {% include svg/google.svg %}
+</a>

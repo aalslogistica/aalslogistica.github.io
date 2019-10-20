@@ -2,41 +2,112 @@
 title: AALS Logística
 timezone: America/Sao_Paulo
 collections:
+  destaques:
+    title: Destaques
+    output: false
   posts:
     title: Posts
     output: true
+  profissionais:
+    title: Profissionais
+    output: false
+  slides:
+    title: Slides
+    output: false
   uploads:
     title: Uploads
     output: true
 defaults:
 - scope:
     path: ''
-    type: pages
-  values:
-    layout: page
-- scope:
-    path: ''
     type: posts
   values:
     layout: post
-lang: pt_BR
-description: Não se esqueça de preencher a descrição do site.
-baseurl: ''
-url: ''
+    permalink: "/blog/:year/:month/:day/:title/"
+    cover_image: 
+    videos: []
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+    icon_image: 
+    title_color: 
+    cover_image: 
+- scope:
+    path: ''
+    type: profissionais
+  values:
+    image: 
+- scope:
+    path: ''
+    type: slides
+  values:
+    image: 
+    image-position: 
+    text-position: 
+    classes: 
+- scope:
+    path: ''
+    type: destaques
+  values:
+    image: 
+description: Há 10 anos cuidando de você e sua família.
+baseurl: "/medicinaesaude"
+url: https://copatecnologia.com.br
+permalink: "/:pretty/"
 markdown: kramdown
-permalink: pretty
+plugins:
+- jekyll-paginate
+- jekyll-feed
+- jekyll-sitemap
+paginate: 8
+paginate_path: "/blog/:num/"
 sass:
   style: compressed
 exclude:
-- ".sass-cache/"
-- ".jekyll-cache/"
-- gemfiles/
 - Gemfile
 - Gemfile.lock
-- node_modules/
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
-- CNAME
+- package.json
+- package-lock.json
+- node_modules
+- npm-debug.log
+- webpack.config.js
+- .babelrc
 - README.md
+- _scripts/
+long-title: AALS Logística
+endereco:
+- Praça da Independência, 11
+- Gonzaga | CEP 11060-100 | Santos - SP | Brasil
+telefones:
+- numero: "+551332890001"
+  rotulo: "(13) 3289-0001"
+- numero: "+5513996707828"
+  rotulo: "(13) 99670-7828"
+  whatsapp: true
+email: atendimento@clinicamedicinaesaude.com.br
+social:
+- label: Facebook
+  link: http://facebook.com/medicinaesaude
+  icone: facebook
+- label: Instagram
+  link: http://instagram.com/medicinaesaude
+  icone: instagram
+- label: Pinterest
+  link: http://pinterest.com/medicinaesaude
+  icone: pinterest
+- label: Twitter
+  link: http://twitter.com/medicinaesaude
+  icone: twitter
+- label: Linkedin
+  link: http://linkedin.com/medicinaesaude
+  icone: linkedin
+- label: Youtube
+  link: http://youtube.com/medicinaesaude
+  icone: youtube
+disqus-name: medicina-e-saude
+google-analytics-id: 
+blog:
+  icon_image: "/uploads/rss.svg"
+  title_color: "#7ac143"

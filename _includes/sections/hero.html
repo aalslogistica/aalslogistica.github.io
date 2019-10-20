@@ -1,0 +1,43 @@
+{% assign slides = site.slides | sort: 'position' %}
+
+<div class="slideshow" data-interval="5000" data-autoplay="wait-img-load">
+
+    {% for slide in slides %}
+
+        {% capture style %}
+        style="
+            {% if slide.image && slide.image != '' %}
+                background-image:url('{{ site.baseurl }}{{ slide.image }}');
+            {% endif %}
+            {% if slide.image-position && slide.image-position != '' %}
+                background-position:{{ slide.image-position }};
+            {% endif %}
+        "
+        {% endcapture %}
+
+        <div class="slide {{ slide.classes }}" data-grid="center">
+
+            <div class="slide-image" {{ style }}></div>
+
+            {% if slide.text-position == 'right' %}
+            <div data-cell="2of3 fill" class="shim"></div>
+            {% endif %}
+            
+            <div class="slide-content" data-cell="shrink fill"
+            {% if slide.text-position == 'right' %}
+                data-text="right"
+            {% endif %}
+            >
+                <h2 class="page-title">{{ slide.title }}</h2>
+                {{ slide.content }}
+            </div>
+
+            {% if slide.text-position == 'left' %}
+            <div data-cell="2of3 fill" class="shim"></div>
+            {% endif %}
+
+        </div>
+
+    {% endfor %}
+
+</div>

@@ -1,0 +1,20 @@
+
+{% assign about = site.pages | where: 'is_about', true | first %}
+
+<div class="wrapper">
+
+    <div data-grid="center spacing">
+        <div data-cell="1of4">
+            {% include svg/favicon.svg %}
+        </div>
+        <div data-cell="3of4">
+            <h2>{{ about.title }}</h2>
+            {{ about.excerpt }}
+            <p data-grid="center spacing justify">
+                <a href="{{ site.baseurl }}{{ about.url }}" data-cell="shrink fill">Saiba mais...</a>
+                <a href="#contato" data-btn data-cell="shrink fill">Contato</a>
+            </p>
+        </div>
+    </div>
+
+</div>

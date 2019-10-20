@@ -1,0 +1,38 @@
+<header class="wrapper">
+    <h2>Blog</h2>
+</header>
+
+<div class="wrapper">
+    <ul class="seamless post-list">
+        {% for post in site.posts limit: 3 %}
+
+        <li class="post-item sliding-box" data-grid="end spacing">
+            {% if post.cover_image %}
+            <div data-cell="1of2{% cycle ' order-1', '' %} fill">
+                <img src="{{ site.baseurl }}{{ post.cover_image }}" alt="{{ post.title }}">
+            </div>
+            {% endif %}
+            <div data-cell="1of2 fill">
+                <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                <small class="post-meta">{{ post.date | date: "%-d/%m/%Y" }}</small>
+                {% if post.excerpt %}
+                <p>
+                    {{ post.excerpt | strip_html | strip_newlines | truncatewords: 25, '...' }}
+                    <small>
+                        <a href="{{ post.url | prepend: site.baseurl }}">Continue lendo...</a>
+                    </small>
+                </p>
+                {% endif %}
+            </div>
+        </li>
+
+        {% endfor %}
+    </ul>
+
+    <p data-text="center">
+        <a data-btn="" href="{{ site.baseurl }}/blog/">Leia mais no nosso blog</a>
+    </p>
+
+</div>

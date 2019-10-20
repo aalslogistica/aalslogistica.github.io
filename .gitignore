@@ -1,5 +1,9 @@
 _site
+.cache
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+npm-debug.log
+node_modules
+js/main.js.map

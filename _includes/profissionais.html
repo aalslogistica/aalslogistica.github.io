@@ -1,0 +1,22 @@
+
+{% assign profissionais = site.profissionais | sort: 'position' %}
+
+{% for p in profissionais %}
+  
+  <div class="page-content wrapper" data-grid="spacing">
+  
+    <div data-cell="1of2 fill" data-grid="center">
+      <div class="circ">
+        <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}">
+      </div>
+    </div>
+  
+    <div data-cell="1of2">
+      <h4>{{ p.title }}</h4>
+      {% assign uploads_src = ' src="' | append: site.baseurl | append: '/uploads' %}
+      {{ p.content | replace: ' src="/uploads', uploads_src }}
+    </div>
+  
+  </div>
+  
+{% endfor %}

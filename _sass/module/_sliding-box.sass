@@ -1,0 +1,14 @@
+.sliding-box
+    &.sliding-box-on
+        @extend %transition
+        transition-duration: .6s
+        transform: translateY(0)
+        opacity: 1
+
+    &.above-screen
+        transform: translateY(-100%)
+        opacity: 0
+
+    &.below-screen
+        transform: translateY(100%)
+        opacity: 0

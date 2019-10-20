@@ -1,0 +1,9 @@
+{% assign href = site.url | append: site.baseurl | append: page.url %}
+<a class="icon {{ include.class }}" 
+    href="https://www.linkedin.com/shareArticle?mini=true&url={{ href | cgi_escape }}" target="_blank" 
+    title="Compartilhar no Linkedin"
+    data-ga-event="click"
+    data-ga-category="Compartilhar ({{ include.position }})"
+>
+    {% include svg/linkedin.svg %}
+</a>

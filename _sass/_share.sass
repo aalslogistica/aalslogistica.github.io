@@ -1,0 +1,34 @@
+.share-btn
+    display: inline-block
+    vertical-align: middle
+    margin-left: 8px
+    padding: 8px
+    background-color: $grey-color
+    color: rgba(#fff, .8)
+    border-radius: 999px
+    opacity: .8
+    &:hover, &:focus, &:active
+        color: #fff
+        opacity: 1
+        box-shadow: 0 1px 1px 1px rgba(#000, .3)
+    svg
+        display: block
+        width: 1em
+        height: 1em
+    
+    $fb-color: #3b5998
+    $tw-color: #55acee
+    $li-color: #007bb5
+    $gp-color: #dd4b39
+    $wa-color: #4dc247
+    &.btn-
+        &fb
+            background-color: $fb-color
+        &tw
+            background-color: $tw-color
+        &li
+            background-color: $li-color
+        &gp
+            background-color: $gp-color
+        &wa
+            background-color: $wa-color

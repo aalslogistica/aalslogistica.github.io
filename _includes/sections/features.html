@@ -1,0 +1,18 @@
+
+<div data-grid="wrap center stretch">
+
+{% for destaque in site.destaques %}
+
+    <article class="feature-item card sliding-box" data-cell="1of3 fill">
+        <div class="feature-pic" data-cell="shrink fill">
+            <img src="{{ site.baseurl }}{{destaque.image }}" alt="Ilustração: {{ destaque.title }}">
+        </div>
+        <div class="feature-content" data-grid="column justify">
+            <h4 class="feature-title">{{ destaque.title }}</h4>
+            {{ destaque.content }}
+        </div>
+    </article>
+
+{% endfor %}
+
+</div>

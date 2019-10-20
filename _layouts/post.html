@@ -2,15 +2,71 @@
 layout: default
 ---
 
+{% include page-cover.html %}
+
 <article class="post page-content" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header wrapper">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.author %} • 
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">{{ page.author }}</span>
+        </span>
+      {% endif %}
+    </p>
   </header>
 
+  <div class="wrapper">
+    <p data-text="right">
+      Compartilhe este post:
+      {% include share/widget.html position = 'Início do post' %}
+    </p>
+  </div>
+
   <div class="post-content" itemprop="articleBody">
-    {{ content }}
+    {% assign uploads_src = ' src="' | append: site.baseurl | append: '/uploads' %}
+    {{ content | replace: ' src="/uploads', uploads_src }}
+
+    {% for v in page.videos %}
+      <div class="page-content wrapper">
+        {% include embed-youtube.html id=v %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="wrapper">
+    <p data-text="right">
+      Compartilhe este post:
+      {% include share/widget.html position = 'Final do post' %}
+    </p>
   </div>
 
 </article>
+
+<aside class="hero light" data-grid="around spacing">
+
+  <div class="wrapper small" data-cell="1of2" data-text="right">
+    <p><small>Mais recente</small></p>
+    {% if page.next %}
+      <h4><a href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a></h4>
+    {% else %}
+      <p>Este é o primeiro post.</p>
+    {% endif %}
+  </div>
+
+  <div class="wrapper small" data-cell="1of2" data-text="left">
+    <p><small>Anterior</small></p>
+    {% if page.previous %}
+      <h4><a href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a></h4>
+    {% else %}
+      <p>Este é o último post.</p>
+    {% endif %}
+  </div>
+
+</aside>
+
+{% include disqus.html %}
+
+{% include sidebar.html %}

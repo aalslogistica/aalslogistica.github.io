@@ -3,6 +3,7 @@
   border: 1px solid $grey-color-light
   border-radius: 4px
   background-color: #fff
+  -webkit-transition: 0.2s ease-in-out
   transition: 0.2s ease-in-out
   backface-visibility: hidden
   outline: none
@@ -112,7 +113,7 @@ textarea
   @extend %form-inputs
   overflow: auto // normalize.css
   resize: vertical
-  min-height: calc(#{$base-line-height} + 40px)
+  min-height: calc($base-line-height + 40px)
 
 \::-webkit-input-placeholder
   color: $grey-color
@@ -132,6 +133,7 @@ textarea
   display: none
 
 button
+  @extend %transition
   @extend %form-basis
   padding-left: 2em
   padding-right: 2em
@@ -140,7 +142,6 @@ button
   border: 1px solid $brand-color
   color: $brand-color
   line-height: 1.5
-  @extend %transition
   &:hover, &:focus
     background-color: $brand-color
     border-color: $brand-color

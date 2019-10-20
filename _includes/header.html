@@ -1,10 +1,13 @@
 <header class="site-header">
 
-  <div class="wrapper">
+  <div class="wrapper large">
 
-    <a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/favicon.png" height="44" alt="{{ site.title }}"></a>
+    <a class="site-title" href="{{ site.baseurl }}/">
+      {% include svg/logo.svg %}
+    </a>
 
     <nav class="site-nav">
+
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
           <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
@@ -14,12 +17,17 @@
       </a>
 
       <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.nav-title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.nav-title }}</a>
+        <a class="page-link" href="{{ site.baseurl }}/">Home</a>
+        {% assign page_links = site.pages | sort: 'position' %}
+        {% for page_link in page_links %}
+          {% if page_link.nav-title %}
+          <a class="page-link" href="{{ page_link.url | prepend: site.baseurl }}">{{ page_link.nav-title }}</a>
           {% endif %}
         {% endfor %}
+        <a class="page-link" href="{{ site.baseurl }}/blog/">Blog</a>
+        <a class="page-link" href="#contato">Contato</a>
       </div>
+
     </nav>
 
   </div>

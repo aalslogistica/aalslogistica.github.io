@@ -1,0 +1,41 @@
+
+<div data-modal="" data-grid="row center" id="contato">
+    <form action="{{ site.url | replace: '://', '://server.' }}/enviar_email.php" method="post" class="wrapper">
+        <a href="#X" data-btn="link close">&times;</a>
+        <header data-grid="row center spacing">
+            <div class="site-title" data-cell="shrink">{% include svg/logo.svg %}</div>
+            <h3>Fale conosco</h3>
+        </header>
+        <p>
+            <label for="nome">Nome <small>(OBRIGATÓRIO)</small></label>
+            <input type="text" name="nome" required="" placeholder="Informe o seu nome">
+        </p>
+        <p>
+            <label for="email">E-mail <small>(OBRIGATÓRIO)</small></label>
+            <input type="email" name="email" required="" placeholder="nome@dominio.com.br">
+        </p>
+        <p>
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" cols="30" rows="5" placeholder="Digite a sua mensagem..."></textarea>
+        </p>
+        <p class="honeypot">
+            <label for="honeypot">Se estiver vendo isto, deixe este campo vazio:</label>
+            <input type="text" name="honeypot">
+        </p>
+        <footer>
+            <p data-grid="row center justify spacing">
+                <a href="#X" data-cell="shrink">Fechar</a>
+                <button data-cell="shrink">Enviar</button>
+            </p>
+            <hr>
+            <p data-text="center">
+                <span data-text="sm">Se preferir, ligue para nós:</span>
+                <br>
+                <a href="tel:{{ site.telefones[0].numero }}">
+                    <span class="icon">{% include svg/telefone.svg %}</span>
+                    <span>{{ site.telefones[0].rotulo }}</span>
+                </a>
+            </p>
+        </footer>
+    </form>
+</div>

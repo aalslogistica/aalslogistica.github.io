@@ -4,9 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% seo %}
-  
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?{{ 'now' | date: '%s' }}">
   <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" />
+
+  {% include google-analytics.html %}
 </head>

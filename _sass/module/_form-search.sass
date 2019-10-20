@@ -1,0 +1,40 @@
+.form-search
+    &-control
+        input, button
+            border: 1px solid $grey-color-light
+            background: $background-color
+            color: inherit
+            &:focus
+                color: inherit
+                border-color: $brand-color
+                box-shadow: none
+                + button
+                    border-color: $brand-color
+                    color: $grey-color-dark
+        input
+            border-right: 0
+            border-radius: 5px 0 0 5px
+        button
+            padding-left: 0
+            padding-right: $spacing-unit / 2
+            border-left: 0
+            border-radius: 0 5px 5px 0
+            color: $grey-color
+            svg
+                width: 1em
+                height: 1em
+                display: block
+            &:focus
+                border-color: $grey-color-light
+                color: $brand-color
+                transform: translate(0)
+                svg
+                    transform: scale(1.1)
+
+.search-result
+    margin-bottom: $spacing-unit / 2
+    &-title
+        font:
+            size: $base-font-size * 1.1
+            weight: bold
+        margin: 0

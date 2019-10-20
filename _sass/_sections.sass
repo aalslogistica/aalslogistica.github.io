@@ -5,20 +5,71 @@
 .section-
 
     &hero
-        @extend %section-spacing
-    &github
-        @extend %section-spacing
+        padding: 0
+        .shim
+            +media-query($on-palm)
+                display: none
+        .slide-content
+            max-width: 30em
     &features
-        article
+        padding-left: $spacing-unit / 2
+        padding-right: $spacing-unit / 2
+
+        .feature-item
+            position: relative
             text-align: center
+
+            svg
+                max-width: 120px
+
             +media-greater($on-palm)
                 max-width: 16em
-        svg
-            max-width: 80%
-            +media-query($on-palm)
-                max-width: 60%
+                margin: $spacing-unit / 2
+    
+        .feature-pic
+            padding: 0
+            height: 200px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center
+        .feature-content
+            line-height: 1.1
+            p
+                font-size: .9em
+        .feature-title
+            letter-spacing: 1px
+            font-size: 1.1em
+
+        +media-query($on-palm)
+            padding: $spacing-unit / 2
+            .feature-item
+                margin: $spacing-unit / 4 0
+            .feature-title
+                font-size: 1em
+                font-weight: bold
+            .feature-pic
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                width: 80px
+                height: 100%
+            .feature-content
+                display: block
+                margin: 0
+                padding: 0
+                padding-left: 80 + $spacing-unit / 2
+                overflow: hidden
+                text-align: left
+
     &about
         @extend %section-spacing
         line-height: 1.6
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/tiny_grid.png")
         p
             letter-spacing: 1px
+        
+    &local
+        padding: 0

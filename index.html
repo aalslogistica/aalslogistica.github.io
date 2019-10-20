@@ -1,7 +1,20 @@
 ---
 layout: default
+sections:
+- name: hero
+- name: features
+- name: about
+  classes: hero light
+- name: blog
+- name: local
 ---
 
-<div class="wrapper">
-  <p>Página inicial</p>
-</div>
+{% for section in page.sections %}
+
+<section class="page-content section-{{ section.name }} {{ section.classes }}" id="{{ section.name }}">
+
+    {% include sections/{{ section.name }}.html %}
+
+</section>
+
+{% endfor %}

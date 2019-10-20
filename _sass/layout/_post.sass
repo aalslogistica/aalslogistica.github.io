@@ -2,8 +2,10 @@
 .post-list 
     margin-left: 0
     list-style: none
-    >li 
+    .post-item
         margin-bottom: $spacing-unit
+        +media-greater($on-palm)
+            border-bottom: 1px solid $grey-color-light
 
 .post-meta 
     font-size: $small-font-size
@@ -28,9 +30,12 @@
 
     >
         h1, h2, h3, h4, h5, h6, p,
-        blockquote, pre, ul, ol, dl,
+        blockquote, pre, ul, ol, dl, hr,
         figure, table, %vertical-rhythm
             @extend .wrapper
+        
+        hr
+            padding: 0
 
         ul, ol
             &:not(.seamless)

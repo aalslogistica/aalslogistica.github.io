@@ -1,12 +1,19 @@
 .site-header
     min-height: 56px
     position: relative
+    z-index: 999
+    background-color: $background-color
+    box-shadow: 0 10px 50px -25px #000
 
 .site-title
     float: left
     line-height: 56px
     img
         display: inline-block
+    svg
+        display: block
+        width: 110px
+        height: 56px
 
 .site-nav 
     float: right
@@ -15,17 +22,32 @@
     .menu-icon 
         display: none
 
-    .page-link 
+    .page-link
+        display: inline-block
+        padding-left: 15px
+        padding-right: 15px
+        font-size: .85em
+        font-weight: bold
+        text-transform: uppercase
         color: $text-color
-        line-height: $base-line-height
-        margin-left: 20px
+        &:hover, &:focus, &:active
+            text-decoration: none
+            background-color: $grey-color-light
 
-    @include media-query($on-palm) 
+    +media-query($large-content-width)
+        .page-link
+            padding-left: 10px
+            padding-right: 10px
+
+    +media-query($content-width)
+        .page-link
+            padding-left: 5px
+            padding-right: 5px
+
+    +media-query($on-laptop) 
         position: absolute
         top: 9px
         right: $spacing-unit / 2
-        background-color: $background-color
-        border-radius: 5px
         text-align: right
         .menu-icon
             display: block
@@ -33,7 +55,7 @@
             width: 36px
             height: 36px
             line-height: 0
-            padding-top: 10px
+            padding-top: 12px
             text-align: center
             >svg
                 width: 18px
@@ -47,9 +69,39 @@
 
         &:hover .trigger 
             display: block
-            padding-bottom: 5px
+            padding-top: 11px
+            perspective: 1000px
+
+            $page-link-anim-duration: .15s
+
+            .page-link
+                background-color: $background-color
+                box-shadow: -5px 5px 15px -5px rgba(black, .1)
+                -webkit-animation: come-up $page-link-anim-duration ease-in-out forwards
+                animation: come-up $page-link-anim-duration ease-in-out forwards
+
+                @for $i from 1 through 10
+                    &:nth-of-type(#{$i})
+                        -webkit-animation-duration: $page-link-anim-duration * $i
+                        animation-duration: $page-link-anim-duration * $i
 
         .page-link
             display: block
-            padding: 5px 10px
-            margin-left: 20px
+            margin: 0
+            padding: 0 $spacing-unit
+
+@-webkit-keyframes come-up
+    0%
+        -webkit-transform: translateY(100%) rotateY(75deg)
+        opacity: 0
+    100%
+        -webkit-transform: translateY(0) rotateY(0)
+        opacity: 1
+
+@keyframes come-up
+    0%
+        transform: translateY(100%) rotateY(75deg)
+        opacity: 0
+    100%
+        transform: translateY(0) rotateY(0)
+        opacity: 1

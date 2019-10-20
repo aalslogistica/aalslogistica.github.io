@@ -1,0 +1,10 @@
+{% capture href %}http://{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+{% capture text %}*{{ page.title }}*: {{ href }}{% endcapture %}
+<a class="icon {{ include.class }}" 
+    href="https://wa.me/?text={{ text | cgi_escape }}" target="_blank" 
+    title="Enviar pelo Whatsapp"
+    data-ga-event="click"
+    data-ga-category="Compartilhar ({{ include.position }})"
+>
+    {% include svg/whatsapp.svg %}
+</a>

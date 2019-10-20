@@ -2,14 +2,32 @@
 layout: default
 ---
 
+{% include page-cover.html %}
+
 <article class="post page-content">
 
   <header class="post-header wrapper">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <div data-grid="center spacing">
+
+      {% if page.icon_image %}
+        <div data-cell="shrink fill">
+          <img src="{{ site.baseurl }}{{ page.icon_image }}" alt="ícone de {{ page.title }}" width="100" height="100">
+        </div>
+      {% endif %}
+
+      <div data-cell="fill">
+        <h1 class="post-title" style="
+        {% if page.title_color %}
+          color: {{ page.title_color }}
+        {% endif %}
+        ">{{ page.title }}</h1>
+      </div>
+    </div>
   </header>
 
   <div class="post-content">
-    {{ content }}
+    {% assign uploads_src = ' src="' | append: site.baseurl | append: '/uploads' %}
+    {{ content | replace: ' src="/uploads', uploads_src }}
   </div>
 
 </article>

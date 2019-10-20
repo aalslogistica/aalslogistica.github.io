@@ -1,11 +1,120 @@
-<footer class="site-footer">
+{% assign avail_icons = "
+  facebook
+  linkedin
+  twitter
+  google
+  instagram
+  youtube
+  pinterest
+" | split: ' ' %}
+
+<p class="footer-social" data-text="center">
+
+  {% for rede in site.social %}
+    {% if avail_icons contains rede.icone %}
+
+    <a href="{{ rede.link }}" title="{{ rede.label }}" data-btn="circ" class="icon">
+      {% include svg/{{ rede.icone }}.svg %}
+    </a>
+
+    {% endif %}
+  {% endfor %}
+
+</p>
+
+<footer class="site-footer hero">
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <div data-grid="spacing">
 
-    <p>{{ site.description }}</p>
+      <div data-cell="shrink">
+        <div class="site-logo">
+          {% include svg/favicon.svg %}
+        </div>
+      </div>
+
+      <div data-cell="">
+    
+        <h2 class="footer-heading">{{ site.long-title }}</h2>
+    
+        <p>{{ site.description }}</p>
+
+        <p data-grid="row nowrap small-spacing">
+          <span class="icon" data-cell="shrink">
+            {% include svg/endereco.svg %}
+          </span>
+          <span>
+            {% for line in site.endereco %}
+              {% if forloop.first == false %}<br>{% endif %}
+              {{ line }}
+            {% endfor %}
+          </span>
+        </p>
+
+        {% if site.email %}
+        <p data-grid="row nowrap small-spacing">
+          <span class="icon" data-cell="shrink">
+            {% include svg/email.svg %}
+          </span>
+          <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+        </p>
+        {% endif %}
+
+        <ul class="seamless" data-grid="row wrap spacing">
+          {% for tel in site.telefones %}
+            <li data-cell="shrink" data-grid="row nowrap small-spacing">
+              <span class="icon" data-cell="shrink">
+              {% if tel.whatsapp == true %}
+                {% include svg/whatsapp.svg %}
+              {% else %}
+                {% include svg/telefone.svg %}
+              {% endif %}
+              </span>     
+              <span><a href="tel:{{ tel.numero }}">{{ tel.rotulo }}</a></span>
+            </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+
+      <div data-cell="shrink">
+
+        <ul class="seamless">
+          <li>
+            <a class="page-link" href="{{ site.baseurl }}/">Home</a>
+          </li>
+          {% assign page_links = site.pages | sort: 'position' %}
+          {% for page_link in page_links %}
+            {% if page_link.nav-title %}
+            <li>
+              <a class="page-link" href="{{ page_link.url | prepend: site.baseurl }}">{{ page_link.nav-title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+          <li>
+            <a class="page-link" href="{{ site.baseurl }}/blog/">Blog</a>
+          </li>
+          <li>
+            <a class="page-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
 
   </div>
 
 </footer>
+
+<div class="footer-copy">
+  <p data-text="center sm">
+    <span data-text="nowrap">Copyright © 2018</span> - 
+    <span data-text="nowrap">Clínica Medicina e Saúde</span> 
+    <span data-text="nowrap">| Todos os direitos reservados |</span> 
+    <span data-text="nowrap">Desenvolvido por 
+      <a href="https://copatecnologia.com.br" target="_blank">Copa Tecnologia</a>
+    </span>
+  </p>
+</div>
