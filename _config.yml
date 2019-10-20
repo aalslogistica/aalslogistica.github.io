@@ -53,7 +53,7 @@ defaults:
   values:
     image: 
 description: Há 10 anos cuidando de você e sua família.
-baseurl: ""
+baseurl: ''
 url: https://copatecnologia.com.br
 permalink: "/:pretty/"
 markdown: kramdown
