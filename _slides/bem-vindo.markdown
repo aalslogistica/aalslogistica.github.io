@@ -5,7 +5,7 @@ position: 0
 image: "/uploads/benjamin-child-GWe0dlVD9e0-unsplash.png"
 image-position: right
 text-position: right
-classes: light
+classes: dark
 ---
 
 Seja bem-vindo à **AALS**. Conheça as
