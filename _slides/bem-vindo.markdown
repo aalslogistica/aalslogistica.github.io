@@ -8,6 +8,6 @@ text-position: right
 classes: dark
 ---
 
-Seja bem-vindo à AALS. Conheça as
-<a href="{{ site.baseurl }}/vantagens" data-text="nowrap">nossas vantagenss</a> ou
+Seja bem-vindo à **AALS**. Conheça as
+<a href="{{ site.baseurl }}/vantagens" data-text="nowrap">nossas vantagens</a> ou
 <a href="#contato" data-text="nowrap">agende uma visita</a>.
