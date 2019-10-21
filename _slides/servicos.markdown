@@ -6,5 +6,5 @@ image: "/uploads/97.jpg"
 classes: light
 ---
 
- <a href="{{ site.baseurl }}/sobre" data-btn>Sobre nós</a>
+ <a href="{{ site.baseurl }}/sobre" data-btn>Perfil</a>
  <a href="#contato" data-text="nowrap" data-btn>Agendamento</a>
