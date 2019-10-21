@@ -8,9 +8,6 @@ collections:
   posts:
     title: Posts
     output: true
-  profissionais:
-    title: Profissionais
-    output: false
   slides:
     title: Slides
     output: false
@@ -34,11 +31,6 @@ defaults:
     icon_image: 
     title_color: 
     cover_image: 
-- scope:
-    path: ''
-    type: profissionais
-  values:
-    image: 
 - scope:
     path: ''
     type: slides
