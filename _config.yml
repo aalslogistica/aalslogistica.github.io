@@ -44,8 +44,8 @@ defaults:
     type: destaques
   values:
     image: 
-description: Há 10 anos cuidando de você e sua família.
-baseurl: ''
+description: Há 30 anos rompendo fronteiras e encurtando distâncias.
+baseurl: 
 url: https://copatecnologia.com.br
 permalink: "/:pretty/"
 markdown: kramdown
@@ -74,7 +74,7 @@ endereco:
 - Jundiaí, SP - 13211-546 - Brasil
 telefones:
 - numero: "+5511999890215"
-  rotulo: "(11) 99989-0215"
+  rotulo: "+55 (11) 99989-0215"
   whatsapp: true
 email: alberto.silva@aals.com.br
 social:
