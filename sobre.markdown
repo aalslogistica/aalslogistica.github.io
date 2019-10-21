@@ -3,7 +3,7 @@ title: Perfil profissional
 date: 2017-12-20 09:05:00 -02:00
 position: 0
 title_color: "#7ac143"
-cover_image: "/uploads/97.jpg"
+cover_image: "/uploads/jeshoots-com-fzOITuS1DIQ-unsplash2.png"
 excerpt: Mais de 30 anos de experiência em consultoria em comércio exterior, entregando
   resultados nos mais variados seguimentos de mercado.
 nav-title: Quem somos
