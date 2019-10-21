@@ -76,35 +76,33 @@ exclude:
 - ".babelrc"
 - README.md
 - _scripts/
-long-title: AALS Logística
+long-title: AAL da Silva Serviços de Apoio Administrativos
 endereco:
-- Praça da Independência, 11
-- Gonzaga | CEP 11060-100 | Santos - SP | Brasil
+- Rua do Alecrim, 310 - Malota
+- Jundiaí, SP - 13211-546 - Brasil
 telefones:
-- numero: "+551332890001"
-  rotulo: "(13) 3289-0001"
-- numero: "+5513996707828"
-  rotulo: "(13) 99670-7828"
+- numero: "+5511999890215"
+  rotulo: "(11) 99989-0215"
   whatsapp: true
-email: atendimento@clinicamedicinaesaude.com.br
+email: alberto.silva@aals.com.br
 social:
 - label: Facebook
-  link: http://facebook.com/medicinaesaude
+  link: http://facebook.com/---
   icone: facebook
 - label: Instagram
-  link: http://instagram.com/medicinaesaude
+  link: http://instagram.com/---
   icone: instagram
 - label: Pinterest
-  link: http://pinterest.com/medicinaesaude
+  link: http://pinterest.com/---
   icone: pinterest
 - label: Twitter
-  link: http://twitter.com/medicinaesaude
+  link: http://twitter.com/---
   icone: twitter
 - label: Linkedin
-  link: http://linkedin.com/medicinaesaude
+  link: http://linkedin.com/---
   icone: linkedin
 - label: Youtube
-  link: http://youtube.com/medicinaesaude
+  link: http://youtube.com/---
   icone: youtube
 disqus-name: medicina-e-saude
 google-analytics-id: 
