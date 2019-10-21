@@ -11,7 +11,7 @@ nav-title: Quem somos
 is_about: true
 ---
 
-<div class="page-content wrapper" data-grid="spacing">
+<div class="page-content wrapper" data-grid="spacing center">
   <div data-cell="1of2 fill" data-grid="center">
     <div class="circ">
 <img src="/uploads/Alberto.jpg" alt="Alberto Amparo Lopes da Silva">
