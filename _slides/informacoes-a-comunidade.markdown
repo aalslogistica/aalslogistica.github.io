@@ -1,5 +1,5 @@
 ---
-title: Informações à comunidade
+title: Informações e notícias
 date: 2018-01-07 11:59:00 -02:00
 position: 2
 image: "/uploads/4295.jpg"
