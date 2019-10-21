@@ -2,7 +2,6 @@
 title: Perfil profissional
 date: 2017-12-20 09:05:00 -02:00
 position: 0
-icon_image: "/uploads/rss.svg"
 title_color: "#7ac143"
 cover_image: "/uploads/97.jpg"
 excerpt: Mais de 30 anos de experiência em consultoria em comércio exterior, entregando
