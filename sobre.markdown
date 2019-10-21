@@ -19,7 +19,7 @@ is_about: true
   </div>
   <div data-cell="1of2">
 <p>
-Alberto Amparo Lopes da Silva, formado em Administração de Empresas, iniciou sua carreira no Departamento Internacional do Banco do Brasil S.A. em 1977, envolvido na assistência às empresas exportadoras e importadoras e, principalmente, nas negociações cobertas por Créditos Documentários.
+**Alberto Amparo Lopes da Silva**, formado em Administração de Empresas, iniciou sua carreira no Departamento Internacional do Banco do Brasil S.A. em 1977, envolvido na assistência às empresas exportadoras e importadoras e, principalmente, nas negociações cobertas por Créditos Documentários.
 </p>
   </div>
 </div>
