@@ -3,7 +3,7 @@ title: Bem vindo!
 date: 2018-01-07 10:07:00 -02:00
 position: 0
 image: "/uploads/benjamin-child-GWe0dlVD9e0-unsplash.png"
-image-position: right
+image-position: left
 text-position: right
 classes: dark
 ---
