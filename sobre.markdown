@@ -11,9 +11,18 @@ nav-title: Quem somos
 is_about: true
 ---
 
-![Alberto.jpg](/uploads/Alberto.jpg)
-
+<div class="page-content wrapper" data-grid="spacing">
+  <div data-cell="1of2 fill" data-grid="center">
+    <div class="circ">
+<img src="/uploads/Alberto.jpg" alt="Alberto Amparo Lopes da Silva">
+    </div>
+  </div>
+  <div data-cell="1of2">
+<p>
 Alberto Amparo Lopes da Silva, formado em Administração de Empresas, iniciou sua carreira no Departamento Internacional do Banco do Brasil S.A. em 1977, envolvido na assistência às empresas exportadoras e importadoras e, principalmente, nas negociações cobertas por Créditos Documentários.
+</p>
+  </div>
+</div>
 
 Experiência comercial internacional, responsável por auxiliar os importadores americanos de produtos agrícolas do Brasil.
 
