@@ -13,10 +13,10 @@ is_about: true
 
 ![Alberto.jpg](/uploads/Alberto.jpg)
 
-Formado em Administração de Empresas, iniciou sua carreira no Departamento Internacional do Banco do Brasil S.A. em 1977, envolvido na assistência às empresas exportadoras e importadoras e, principalmente, nas negociações cobertas por Créditos Documentários.
+Alberto Amparo Lopes da Silva, formado em Administração de Empresas, iniciou sua carreira no Departamento Internacional do Banco do Brasil S.A. em 1977, envolvido na assistência às empresas exportadoras e importadoras e, principalmente, nas negociações cobertas por Créditos Documentários.
 
 Experiência comercial internacional, responsável por auxiliar os importadores americanos de produtos agrícolas do Brasil.
 
-Em 1987, fundou a WCA Consultoria e Comércio Exterior Ltda., Uma empresa de consultoria em negócios de comércio exterior. Diretor de operações, especialista em gerenciamento de operações de exportação, importação e draubaque, oferecendo consultoria técnica e suporte operacional aos clientes.
+Em 1987, fundou a WCA Consultoria e Comércio Exterior Ltda., renomada empresa de consultoria em negócios de comércio exterior. Diretor de operações, especialista em gerenciamento de operações de exportação, importação e drawback, oferecendo consultoria técnica e suporte operacional aos clientes.
 
 Consultor de Beachhead da Nova Zelândia Comércio e Empresa - NZTE, uma agência governamental da Nova Zelândia para o desenvolvimento de negócios internacionais, comprometida em fornecer serviços e suporte personalizados às empresas neozelandesas interessadas no mercado brasileiro.
