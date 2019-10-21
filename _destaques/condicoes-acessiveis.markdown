@@ -1,8 +1,8 @@
 ---
-title: CONDIÇÕES ACESSÍVEIS
+title: PORQUE AALS
 date: 2018-06-21 00:19:00 -03:00
 position: 2
-image: "/uploads/planos.jpg"
+image: "/uploads/businessman-3213659_1920.jpg"
 ---
 
-[Confira a lista de Convênios](convenios/)
+[Confira a nossas vantagens](vantagens/)
