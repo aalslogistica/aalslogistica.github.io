@@ -1,5 +1,5 @@
 ---
-title: Quem somos
+title: Perfil profissional
 date: 2017-12-20 09:05:00 -02:00
 position: 0
 icon_image: "/uploads/rss.svg"
@@ -10,6 +10,8 @@ excerpt: Mais de 30 anos de experiência em consultoria em comércio exterior, e
 nav-title: Quem somos
 is_about: true
 ---
+
+![Alberto.jpg](/uploads/Alberto.jpg)
 
 Formado em Administração de Empresas, iniciou sua carreira no Departamento Internacional do Banco do Brasil S.A. em 1977, envolvido na assistência às empresas exportadoras e importadoras e, principalmente, nas negociações cobertas por Créditos Documentários.
 
