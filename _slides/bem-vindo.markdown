@@ -8,6 +8,6 @@ text-position: right
 classes: dark
 ---
 
-Seja bem-vindo à nossa clínica. Conheça as
-<a href="{{ site.baseurl }}/especialidades" data-text="nowrap">nossas especialidades</a> ou
-<a href="#contato" data-text="nowrap">agende uma consulta</a>.
+Seja bem-vindo à AALS. Conheça as
+<a href="{{ site.baseurl }}/vantagens" data-text="nowrap">nossas vantagenss</a> ou
+<a href="#contato" data-text="nowrap">agende uma visita</a>.
