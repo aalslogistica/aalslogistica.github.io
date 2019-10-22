@@ -8,6 +8,7 @@ excerpt: Mais de 30 anos de experiência em consultoria em comércio exterior, e
   resultados nos mais variados seguimentos de mercado.
 nav-title: Quem somos
 is_about: true
+thumbnail_image: "/uploads/hunters-race-rounded.png"
 ---
 
 <div class="page-content wrapper" data-grid="spacing center">
