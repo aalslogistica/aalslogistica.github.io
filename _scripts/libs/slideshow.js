@@ -85,7 +85,7 @@ export default class SlideShow {
     }
 
     forEach(fn) {
-        if (!fn instanceof Function) return;
+        if (!(fn instanceof Function)) return;
         Array.prototype.forEach.call(this.children, fn);
     }
 
