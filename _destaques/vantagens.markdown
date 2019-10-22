@@ -5,4 +5,4 @@ position: 2
 image: "/uploads/2597273.jpg"
 ---
 
-[Confira a nossas vantagens](vantagens/)
+[Confira a nossos diferenciais](vantagens/)
