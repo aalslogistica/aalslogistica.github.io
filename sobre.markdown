@@ -25,7 +25,9 @@ thumbnail_image: "/uploads/hunters-race-rounded.png"
 </div>
 • Experiência comercial internacional, responsável por auxiliar os importadores americanos de produtos agrícolas do Brasil.
 
-• Em 1987, fundou a WCA Consultoria e Comércio Exterior Ltda., renomada empresa de consultoria em negócios de comércio exterior. Diretor de operações, especialista em gerenciamento de operações de exportação, importação e drawback, oferecendo consultoria técnica e suporte operacional aos clientes.
+• Em 1987, fundou a WCA Consultoria e Comércio Exterior Ltda., renomada empresa de consultoria em negócios de comércio exterior.
+
+• Diretor de operações, especialista em gerenciamento de operações de exportação, importação e drawback, oferecendo consultoria técnica e suporte operacional aos clientes.
 
 • Consultor de Beachhead da Nova Zelândia Comércio e Empresa - NZTE, uma agência governamental da Nova Zelândia para o desenvolvimento de negócios internacionais, comprometida em fornecer serviços e suporte personalizados às empresas neozelandesas interessadas no mercado brasileiro.
 
