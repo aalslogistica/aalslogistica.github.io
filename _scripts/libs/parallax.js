@@ -1,6 +1,4 @@
-import {
-    requestAnimFrame
-} from '../libs/util';
+import requestAnimFrame from "../util/requestAnimFrame";
 
 function parallax(container, contents) {
     if (typeof container === 'string') container = document.querySelector(container);

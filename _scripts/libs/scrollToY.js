@@ -1,36 +1,25 @@
-import {requestAnimFrame} from '../libs/util';
+import requestAnimFrame from "../util/requestAnimFrame";
 
-export default function scrollToY(scrollTargetY, speed, easing, fn) {
-    // scrollTargetY: the target scrollY property of the window
-    // speed: time in pixels per second
-    // easing: easing equation to use
+// easing equations from https://github.com/danro/easing-js/blob/master/easing.js
+const easingEquations = {
+    easeOutSine: pos => Math.sin(pos * (Math.PI / 2)),
+    easeInOutSine: pos => (-0.5 * (Math.cos(Math.PI * pos) - 1)),
+    easeInOutQuint: pos => (
+        (pos /= 0.5) < 1
+            ? 0.5 * Math.pow(pos, 5)
+            : 0.5 * (Math.pow((pos - 2), 5) + 2)
+    ),
+};
 
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop,
-        scrollTargetY = scrollTargetY || 0,
-        speed = speed || 2000,
-        easing = easing || 'easeOutSine',
-        currentTime = 0;
+const scrollToY = (tY, spd, ezfn, fn) => {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTargetY = tY || 0;
+    const speed = spd || 2000;
+    const time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
 
-    // min time .1, max time .8 seconds
-    var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+    const easing = ezfn || 'easeOutSine';
+    let currentTime = 0;
 
-    // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
-    var easingEquations = {
-            easeOutSine: function (pos) {
-                return Math.sin(pos * (Math.PI / 2));
-            },
-            easeInOutSine: function (pos) {
-                return (-0.5 * (Math.cos(Math.PI * pos) - 1));
-            },
-            easeInOutQuint: function (pos) {
-                if ((pos /= 0.5) < 1) {
-                    return 0.5 * Math.pow(pos, 5);
-                }
-                return 0.5 * (Math.pow((pos - 2), 5) + 2);
-            }
-        };
-
-    // add animation loop
     function tick() {
         currentTime += 1 / 60;
 
@@ -46,6 +35,7 @@ export default function scrollToY(scrollTargetY, speed, easing, fn) {
         }
     }
 
-    // call it once to get started
     tick();
-}
+};
+
+export default scrollToY;

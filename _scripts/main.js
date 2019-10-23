@@ -1,6 +1,6 @@
-import bindGoogleAnalyticsEvents from './libs/bindGoogleAnalyticsEvents';
-import initSliders from './libs/initSliders';
-import loadGoogleMaps from './libs/loadGoogleMaps';
+import bindGoogleAnalyticsEvents from './main/bindGoogleAnalyticsEvents';
+import initSliders from './main/initSliders';
+import loadGoogleMaps from './main/loadGoogleMaps';
 import parallax from './libs/parallax';
 import slidingBoxes from './libs/slidingBoxes';
 

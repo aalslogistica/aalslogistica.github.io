@@ -1,4 +1,4 @@
-import SlideShow from "./SlideShow";
+import SlideShow from "../libs/SlideShow";
 
 const sliderAttributes = {
   'data-autoplay': (self) => {
