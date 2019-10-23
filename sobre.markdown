@@ -29,6 +29,6 @@ thumbnail_image: "/uploads/hunters-race-rounded2.png"
 
 • Diretor de operações, especialista em gerenciamento de operações de exportação, importação e drawback, oferecendo consultoria técnica e suporte operacional aos clientes.
 
-• Consultor de Beachhead da Nova Zelândia Comércio e Empresa - NZTE, uma agência governamental da Nova Zelândia para o desenvolvimento de negócios internacionais, comprometida em fornecer serviços e suporte personalizados às empresas neozelandesas interessadas no mercado brasileiro.
+• Beachhead Advisor da NZTE – New Zealand Trade & Enterprise, agência de fomento ao comércio exterior de bens e serviços, mantida pelo governo da Nova Zelândia em seu Consulado na cidade de São Paulo, que atende às empresas neozelandesas interessadas no mercado brasileiro.
 
 
