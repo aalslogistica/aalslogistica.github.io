@@ -87,6 +87,7 @@ export default class SlideShow {
     }
 
     play() {
+        if (this.timeoutId) clearInterval(this.timeoutId);
         this.timeoutId = setInterval(() => { this.goNext() }, this.interval);
     }
 
